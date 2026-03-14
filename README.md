@@ -44,21 +44,40 @@ El sistema funciona orquestando **dos pilas**:
     ```
 5.  Sigue las instrucciones del menú interactivo en la consola.
 
-##Capturas de Pantalla de la Ejecución
+# Capturas de Pantalla de la Ejecución Real
 
-*(Instrucción para Jorge: Aquí debes agregar imágenes de tu consola funcionando. Sube las imágenes a la carpeta de tu repositorio y usa el siguiente formato para mostrarlas)*
+##Llenar el stack
+* **Menú de inicio y escritura:
+![img_4.png](img_4.png)
 
-*Ejemplo de cómo añadir imágenes:*
-> `![Menú Principal](ruta/a/tu/imagen_menu.png)`
-> `![Prueba de Deshacer](ruta/a/tu/imagen_undo.png)`
+* **Ingresar texto:
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
 
-* **Menú de inicio y escritura:** [Añadir captura aquí]
-* **Mostrando el historial:** [Añadir captura aquí]
-* **Prueba de Deshacer y Rehacer:** [Añadir captura aquí]
+* ** Mostrar el texto actual (peek (cima)). El ultimo elemento es el primero en salir (cima):
+![img_8.png](img_8.png)
 
-## Contribuyentes (Integrantes del Grupo)
 
-* **Jorge Andrés Murillo Rivera** - *Desarrollador*
+##Probar el Undo (Deshacer)
+* ** Probar el Undo (Deshacer):
+![img_9.png](img_9.png)
+
+* ** Mostrar elementos actuales:
+Ahora el penúltimo elemento que entró ocupa la cima.
+![img_10.png](img_10.png)
+
+
+##Probar el Redo (Rehacer)
+Recuperar a Cuerpo:
+![img_11.png](img_11.png)
+
+Mostrar los elementos actuales:
+![img_12.png](img_12.png)
+
+## Desarrollador
+
+* **Jorge Andrés Murillo Rivera
 
 
 ---
