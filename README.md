@@ -54,7 +54,9 @@ El sistema funciona orquestando **dos pilas**:
 * Ingresar texto:
   
 ![img_5.png](img_5.png)
+
 ![img_6.png](img_6.png)
+
 ![img_7.png](img_7.png)
 
 * Mostrar el texto actual (peek (cima)). El ultimo elemento es el primero en salir (cima):
