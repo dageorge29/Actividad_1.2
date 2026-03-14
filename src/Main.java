@@ -33,7 +33,8 @@ public class Main {
         String opc2;
 
         //Input de texto
-        String input;
+
+        String textoAEnviar = "";
         do {
             //Info
             System.out.println("\n===============================");
@@ -46,43 +47,56 @@ public class Main {
 
             System.out.print("Opción: ");
             opcion = sc.nextInt();
+            sc.nextLine();
 
 
 
             //Opciones de acciones
+
             switch (opcion) {
 
-                //Escribir texto
+                //Escribir texto: Pide
                 case 1 -> {
                     System.out.print("\nSeleccionaste escribir texto en el Stack\nIngresa un texto: ");
-                    input = sc.nextLine();
-                    stack.push(sc.nextLine());
-                }
+                    textoAEnviar = sc.nextLine();
+                    stack.push(textoAEnviar);
 
-                //Deshacer texto
+                }
+                //undo texto
                 case 2 -> {
-
-                }
-
-                //Rehacer texto
-                case 3 -> {
-
-                }
-
-                case 4 -> {
-                    for (int i = 0; i < stack.size(); i++) {
-                        System.out.println(i);
+                    if (!stack.isEmpty()) {
+                        stack2.push(stack.pop()); //elimina el último (primero que sale) elemento del stack principal y lo envía al stack2 temporal (al redo)
+                        System.out.println("Acción deshecha. Eliminaste a " + textoAEnviar);
+                    } else {
+                        System.out.println("No tienes nada para deshacer");
                     }
                 }
 
-                case 5 -> {
+                //redo texto
+                case 3 -> {
+                    if (!stack2.isEmpty()) {
+                        String recuperado = stack2.pop();
+                        stack.push(recuperado); //saca el último elemento y lo regresa al primer stack
+                        System.out.println("Acción rehecha\nHabías ingresado: " + recuperado);
+                    } else {
+                        System.out.println("No tienes nada para deshacer");
+                    }
+                }
 
+                //mostrar el texto actual
+                case 4 -> {
+                    System.out.println("Todos los elementos existentes son: " + stack);
+                }
+
+                //leave
+                case 5 -> {
                     validez = false;
                     System.out.println("Seleccionaste salir del programa");
-                    System.out.println("\nAdiós. Gracias por usar este sistema :D");
-                    System.out.println("\n===============================");
+
                 }
             }
         } while (validez == true);
+        System.out.println("\nAdiós. Gracias por usar este sistema :D");
+        System.out.println("\n===============================");
     }
 }
