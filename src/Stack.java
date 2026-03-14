@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
 public class Stack {
-    //Implementación de pila dinámica usando ArrayList
-
     private final ArrayList<String> stacklist;
 
     public Stack() {
@@ -14,23 +12,16 @@ public class Stack {
     }
 
     public String pop() {
-        if (stacklist.isEmpty()) {
-            System.out.println("Stack is empty. Cannot pop");
-            return "Cannot pop";
+        if (isEmpty()) {
+            return null;
         } else {
-            String value = stacklist.get(stacklist.size() - 1);
-            stacklist.removeLast();
-            return value;
+            // El último elemento de la lista es la cima
+            return stacklist.remove(stacklist.size() - 1);
         }
     }
 
-    public String peek() {
-        if (!stacklist.isEmpty()) {
-            return stacklist.getLast();
-        } else {
-            System.out.println("Stack is empty. Cannot peek");
-            return "Cannot peek";
-        }
+    public void clear() {
+        stacklist.clear();
     }
 
     public boolean isEmpty() {
@@ -38,23 +29,23 @@ public class Stack {
     }
 
     public int size() {
-        return  stacklist.size();
+        return stacklist.size();
     }
 
     @Override
     public String toString() {
-        if (isEmpty()) {
-            return "[]";
-        }
+        if (isEmpty()) return "[]";
+
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        for (int i = stacklist.size() - 1; i >= 0; i-- ) {
+        // Imprimimos de 0 a N para que la cima esté a la derecha
+        for (int i = 0; i < stacklist.size(); i++) {
             sb.append(stacklist.get(i));
-            if (i > 0) {
+            if (i < stacklist.size() - 1) {
                 sb.append(", ");
             }
         }
-        sb.append("] <- cima");
+        sb.append("] <- CIMA");
         return sb.toString();
     }
 }

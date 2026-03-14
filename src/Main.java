@@ -61,6 +61,7 @@ public class Main {
                     textoAEnviar = sc.nextLine();
                     stack.push(textoAEnviar);
 
+
                 }
                 //undo texto
                 case 2 -> {
@@ -93,6 +94,9 @@ public class Main {
                     validez = false;
                     System.out.println("Seleccionaste salir del programa");
 
+                }
+                default -> {
+                    System.out.println("Opción no válida");
                 }
             }
         } while (validez == true);
