@@ -45,7 +45,15 @@ public class Stack {
                 sb.append(", ");
             }
         }
-        sb.append("] <- CIMA");
+        sb.append("] <- CIMA (PEEK)");
         return sb.toString();
+    }
+    // Método peek: Mira el elemento en la cima sin sacarlo
+    public String peek() {
+        if (isEmpty()) {
+            return null;
+        } else {
+            return stacklist.get(stacklist.size() - 1);
+        }
     }
 }

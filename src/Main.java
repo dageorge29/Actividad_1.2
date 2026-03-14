@@ -60,13 +60,13 @@ public class Main {
                     System.out.print("\nSeleccionaste escribir texto en el Stack\nIngresa un texto: ");
                     textoAEnviar = sc.nextLine();
                     stack.push(textoAEnviar);
-
-
+                    stack2.clear();
                 }
                 //undo texto
                 case 2 -> {
                     if (!stack.isEmpty()) {
-                        stack2.push(stack.pop()); //elimina el último (primero que sale) elemento del stack principal y lo envía al stack2 temporal (al redo)
+                        String deshecho = stack.pop();
+                        stack2.push(deshecho); //elimina el último (primero que sale) elemento del stack principal y lo envía al stack2 temporal (al redo)
                         System.out.println("Acción deshecha. Eliminaste a " + textoAEnviar);
                     } else {
                         System.out.println("No tienes nada para deshacer");
