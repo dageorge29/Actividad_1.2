@@ -2,23 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     static void main(String[] args) {
-        /*
-        Incluir las operaciones fundamentales:
-
-        push(), pop(), peek(), isEmpty().
-
-        Implementar el menú en consola con opciones:
-
-        Escribir texto
-
-        Deshacer
-
-        Rehacer
-
-        Mostrar texto actual
-
-        Salir
-         */
         //Instanciación
         Scanner sc = new Scanner(System.in);
 
@@ -36,7 +19,7 @@ public class Main {
 
         String textoAEnviar = "";
         do {
-            //Info
+            //Menú
             System.out.println("\n===============================");
             System.out.println("BIENVENIDO A MI STACK\n===============================\n");
 
@@ -59,14 +42,14 @@ public class Main {
                 case 1 -> {
                     System.out.print("\nSeleccionaste escribir texto en el Stack\nIngresa un texto: ");
                     textoAEnviar = sc.nextLine();
-                    stack.push(textoAEnviar);
-                    stack2.clear();
+                    stack.push(textoAEnviar); //Ingresa el elemento al stack principal
+                    stack2.clear(); //Limpia el stack2 de residuos
                 }
                 //undo texto
                 case 2 -> {
                     if (!stack.isEmpty()) {
-                        String deshecho = stack.pop();
-                        stack2.push(deshecho); //elimina el último (primero que sale) elemento del stack principal y lo envía al stack2 temporal (al redo)
+                        String deshecho = stack.pop();//elimina el ultimo (peek) elemento del stack principal
+                        stack2.push(deshecho); //ingreas el elemento eliminado en el stack2 temporal (papelera)
                         System.out.println("Acción deshecha. Eliminaste a " + textoAEnviar);
                     } else {
                         System.out.println("No tienes nada para deshacer");
@@ -77,7 +60,7 @@ public class Main {
                 case 3 -> {
                     if (!stack2.isEmpty()) {
                         String recuperado = stack2.pop();
-                        stack.push(recuperado); //saca el último elemento y lo regresa al primer stack
+                        stack.push(recuperado); //saca el último elemento del stack2 temporal y lo regresa al stack principal
                         System.out.println("Acción rehecha\nHabías ingresado: " + recuperado);
                     } else {
                         System.out.println("No tienes nada para deshacer");
@@ -95,6 +78,8 @@ public class Main {
                     System.out.println("Seleccionaste salir del programa");
 
                 }
+
+                //Error de opcion
                 default -> {
                     System.out.println("Opción no válida");
                 }
