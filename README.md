@@ -47,7 +47,7 @@ El sistema funciona orquestando **dos pilas**:
 # Capturas de Pantalla de la Ejecución Real
 
 ## Llenar el stack
-* **Menú de inicio y escritura:
+* Menú de inicio y escritura:
   
 ![img_4.png](img_4.png)
 
@@ -61,20 +61,25 @@ El sistema funciona orquestando **dos pilas**:
 ![img_8.png](img_8.png)
 
 
-##Probar el Undo (Deshacer)
+## Probar el Undo (Deshacer)
 * Probar el Undo (Deshacer):
+  
 ![img_9.png](img_9.png)
+
 
 * Mostrar elementos actuales:
 Ahora el penúltimo elemento que entró ocupa la cima.
+
 ![img_10.png](img_10.png)
 
 
 ## Probar el Redo (Rehacer)
 Recuperar a Cuerpo:
+
 ![img_11.png](img_11.png)
 
 * Mostrar los elementos actuales:
+  
 ![img_12.png](img_12.png)
 
 ## Desarrollador
