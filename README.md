@@ -1,4 +1,4 @@
-# Simulador de Editor de Texto (Undo/Redo) con Stacks en Java 📝
+# Simulador de Editor de Texto (Undo/Redo) con Stacks en Java 
 
 Este proyecto es una aplicación de consola en Java que simula las funciones de **Deshacer (Undo)** y **Rehacer (Redo)** típicas de un editor de texto.
 
@@ -20,7 +20,7 @@ El sistema funciona orquestando **dos pilas**:
 * `peek()`: Devuelve el elemento de la cima sin extraerlo.
 * `isEmpty()`: Verifica si la pila está vacía.
 
-##Instrucciones de Ejecución
+## Instrucciones de Ejecución
 
 ### Prerrequisitos
 * Tener instalado **Java Development Kit (JDK)** versión 8 o superior.
@@ -46,38 +46,40 @@ El sistema funciona orquestando **dos pilas**:
 
 # Capturas de Pantalla de la Ejecución Real
 
-##Llenar el stack
+## Llenar el stack
 * **Menú de inicio y escritura:
+  
 ![img_4.png](img_4.png)
 
-* **Ingresar texto:
+* Ingresar texto:
+  
 ![img_5.png](img_5.png)
 ![img_6.png](img_6.png)
 ![img_7.png](img_7.png)
 
-* ** Mostrar el texto actual (peek (cima)). El ultimo elemento es el primero en salir (cima):
+* Mostrar el texto actual (peek (cima)). El ultimo elemento es el primero en salir (cima):
 ![img_8.png](img_8.png)
 
 
 ##Probar el Undo (Deshacer)
-* ** Probar el Undo (Deshacer):
+* Probar el Undo (Deshacer):
 ![img_9.png](img_9.png)
 
-* ** Mostrar elementos actuales:
+* Mostrar elementos actuales:
 Ahora el penúltimo elemento que entró ocupa la cima.
 ![img_10.png](img_10.png)
 
 
-##Probar el Redo (Rehacer)
+## Probar el Redo (Rehacer)
 Recuperar a Cuerpo:
 ![img_11.png](img_11.png)
 
-Mostrar los elementos actuales:
+* Mostrar los elementos actuales:
 ![img_12.png](img_12.png)
 
 ## Desarrollador
 
-* **Jorge Andrés Murillo Rivera
+* Jorge Andrés Murillo Rivera
 
 
 ---
